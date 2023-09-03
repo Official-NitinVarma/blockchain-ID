@@ -171,7 +171,7 @@
         if (videoIdMatch) {
             const videoId = videoIdMatch[1];
             const encodedVideoId = btoa(videoId);
-            return `https://v2de.blogspot.com/p/watch.html?videoid=${encodedVideoId}`;
+            return `https://cdnorg.blogspot.com/p/watch.html?videoid=${encodedVideoId}&res=480`;
         } else {
             return "#";
         }
