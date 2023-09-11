@@ -17339,8 +17339,25 @@ eval(function(p, a, c, k, e, d) {
                 }
             }
             ,
-        
-          
+            e.openAndSendXhr = function(t, e, r) {
+                t.readyState || t.open("GET", e.url, !0);
+                var i = this.context.headers
+                  , n = r.loadPolicy
+                  , a = n.maxTimeToFirstByteMs
+                  , s = n.maxLoadTimeMs;
+                if (i)
+                    for (var o in i)
+                        t.setRequestHeader(o, i[o]);
+                e.rangeEnd && t.setRequestHeader("Range", "bytes=" + e.rangeStart + "-" + (e.rangeEnd - 1)),
+                t.onreadystatechange = this.readystatechange.bind(this),
+                t.onprogress = this.loadprogress.bind(this),
+                t.responseType = e.responseType,
+                self.clearTimeout(this.requestTimeout),
+                r.timeout = a && y(a) ? a : s,
+                this.requestTimeout = self.setTimeout(this.loadtimeout.bind(this), r.timeout),
+                t.send()
+            }
+            ,
             e.readystatechange = function() {
                 var t = this.context
                   , e = this.loader
@@ -17405,7 +17422,7 @@ eval(function(p, a, c, k, e, d) {
                   , r = this.stats;
                 this.retryDelay = Ve(t, r.retry),
                 r.retry++,
-                D.warn((status ? "HTTP Status " + status : "Timeout") + " while loading " + e.url + ", retrying " + r.retry + "/" + t.maxNumRetry + " in " + this.retryDelay + "ms"),
+               
                 this.abortInternal(),
                 this.loader = null,
                 self.clearTimeout(this.retryTimeout),
