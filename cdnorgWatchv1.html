@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>WATCH CDNORG</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script clear-log='true' disable-copy='true' disable-cut='true' disable-devtool-auto='true' disable-paste='false' disable-select='false' src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap|Inter:bold" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         body {
+         background-color: #f3f4f6;
+         font-family: 'Montserrat', sans-serif;
+         }
+         :root {
+         --plyr-color-main: #4a5464;
+         --plyr-menu-radius: 5px;
+         }
+         .plyr {
+         border-radius: 5px;
+         margin-bottom: 5px;
+         }
+      </style>
+   </head>
+   <body class="flex flex-col items-center justify-center">
+      <center>
+         <h1 class="mb-2 mr-2 ml-2 mt-4 text-3xl tracking-tight font-extrabold lg:text-5xl text-gray-900 pr-4 pl-4 md:text-4xl">Video Player API</h1>
+      </center>
+      <p class="mt-2 px-5 py-2.5 text-gray-900 text-center">This API is provided for demonstration purposes only and is not meant to infringe any copyright.</p>
+     
+     <div class=" ml-5 mr-5 bg-teal-100 border-t-0  rounded-md  text-teal-900 px-4 py-4" role="alert">
+         <p class="font-bold">⚡ Now enjoy Seamless Experience!</p>
+         <p class="text-xs  py-2.5">We are pleased to announce a solution to enhance your video playback experience. Many users have reported issues with video lagging and stalling when seeking forward or backward. To address this, we have introduced a seamless option for video playback through VLC.</p><p class="text-xs font-semibold">The default video resolution of the lectures is changed to 480p. To change video resolution refer to <a href="/p/api.html?#FAQs"  target="_blank" class="text-blue-500">FAQs.</a></p>
+      </div>
+        <br>
+     
+      <div style="font-family: 'Montserrat', sans-serif;" id="video-container" class="w-full md:w-3/4 lg:w-1/2 mx-auto rounded-md overflow-hidden p-4 md:p-8 ">
+         <div id="video-player" class="relative">
+            <video controls class="w-full">
+               Your browser does not support the video tag.
+            </video>
+           
+            <center> <button id="share-button" class="inline-flex text-white bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-bold rounded-lg text-sm px-5 py-2 mr-4 dark:focus:ring-primary-900 my-4">🔗 Share Video</button>
+              
+                <button
+    id="vlc-button"
+    data-video-url="vlc://{videoUrl}"
+    class="inline-flex text-white bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-bold rounded-lg text-sm px-5 py-2 dark:focus:ring-primary-900 my-4"
+  >
+   Play via VLC
+  </button>
+           
+           </center>
+           
+           <div class=" ml-5 mr-5 bg-teal-100 border-t-0  rounded-md  text-teal-900 px-4 py-4" role="alert">
+
+         
+
+         <p class="text-xs  py-2.5"> There must be VLC Player installed in your device to play via VLC. Get it from Play Store or App Store.</p>
+
+      </div>
+      
+     
+
+
+           
+           
+           
+         </div>
+      </div>
+      <div  id="error-container" class="w-full md:w-3/4 lg:w-1/2 mx-auto rounded-md overflow-hidden p-4 md:p-8">
+         <section id="error-section" class=" bg-gray-900 text-center mx-auto mt-4 p-4 rounded-lg hidden relative">
+            <h1 class="mb-4 text-3xl tracking-tight font-extrabold lg:text-5xl md:text-4xl text-white"></h1>
+            <p class="mb-4 px-5  text-lg font-light text-gray-400"></p>
+            <a href="https://cdnorg.blogspot.com/p/api.html" class="inline-flex text-gray-900 bg-white hover:bg-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:focus:ring-primary-900 my-4">Back to Homepage</a>
+         </section>
+      </div>
+      <div class=" ml-5 mr-5 bg-teal-100 border-t-0   border-gray-300 rounded-md text-teal-900 px-4 py-4 " role="alert">
+        <p class="font-bold py-2">📜  <u> Copyright Infringement not intended!</u></p>
+         <p class="text-xs  py-2.5">We would like to formally affirm that we hold the utmost respect for intellectual property rights and are committed to ensuring the lawful and ethical use of copyrighted materials. <br><br> This Player is  designed solely for the purpose of playing videos and providing a seamless viewing experience  for our users. We want to emphasize that our intention is not to infringe upon any copyrights or violate any intellectual property laws.<br> <br>
+            If any issue persists, <a href="https://telegram.me/cdnorg" target="_blank" class="text-blue-500">contact us</a>.
+         </p>
+      </div>
+      
+   </body>
+  </html>
